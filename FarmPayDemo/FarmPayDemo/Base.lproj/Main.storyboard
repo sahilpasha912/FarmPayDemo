@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="FarmPayDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rdv-2t-xNj">
+                                <rect key="frame" x="0.0" y="84" width="414" height="812"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96470588235294119" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="780-fU-9Jq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="farmpay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIM-wV-5P3">
+                                        <rect key="frame" x="170" y="39.5" width="74" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farmPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7KZ-Fj-D8w">
+                                        <rect key="frame" x="243" y="40" width="22" height="23"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="Tpb-CK-5Jj"/>
+                                    <constraint firstItem="lIM-wV-5P3" firstAttribute="centerX" secondItem="780-fU-9Jq" secondAttribute="centerX" id="aRR-1f-xug"/>
+                                    <constraint firstItem="7KZ-Fj-D8w" firstAttribute="leading" secondItem="lIM-wV-5P3" secondAttribute="trailing" constant="-1" id="uYR-hd-f4p"/>
+                                    <constraint firstItem="7KZ-Fj-D8w" firstAttribute="bottom" secondItem="lIM-wV-5P3" secondAttribute="bottom" id="vc5-R8-7EV"/>
+                                    <constraint firstAttribute="bottom" secondItem="lIM-wV-5P3" secondAttribute="bottom" constant="21" id="y1M-wU-Ayz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="780-fU-9Jq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E6W-mB-z4k"/>
+                            <constraint firstItem="780-fU-9Jq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FCy-Mb-Pz5"/>
+                            <constraint firstItem="rdv-2t-xNj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mhf-M1-DGS"/>
+                            <constraint firstItem="780-fU-9Jq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PLQ-rl-cO9"/>
+                            <constraint firstItem="rdv-2t-xNj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="doQ-HJ-JrI"/>
+                            <constraint firstItem="rdv-2t-xNj" firstAttribute="top" secondItem="780-fU-9Jq" secondAttribute="bottom" id="gq9-l5-WBG"/>
+                            <constraint firstAttribute="bottom" secondItem="rdv-2t-xNj" secondAttribute="bottom" id="yoV-jO-itK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardListTableView" destination="rdv-2t-xNj" id="4Ed-gb-K4a"/>
+                        <outlet property="topView" destination="780-fU-9Jq" id="P96-qa-dd5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="farmPayIcon" width="22" height="23"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
